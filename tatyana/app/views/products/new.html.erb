@@ -1,0 +1,25 @@
+<%= form_for(@product) do |f|%>
+	<div style="width: 40%; margin: 0 auto;">
+		<div class="title_style">Create a new product</div>
+		<div class="field">
+		<%= f.text_field :name, placeholder: "Name" ,class:"form-control" %>
+		</div>
+		<div class="field">
+			<%= f.text_area :description, placeholder: "Description" ,class:"form-control" %>
+		</div>
+		<div class="field">
+			Price: <%= f.number_field :price, class: :text_field, step: :any %>
+		</div>
+		<div class="field">
+			Stock: <%= f.number_field :stock, class: :text_field, step: :any %>
+		</div>
+		<% @product.errors.full_messages.each do |message|%>
+			<div>
+					> <%= message%>
+			</div>
+		<%end%>
+		<div class="field">
+			<center><%= f.submit "Save" , class:"button"%></center>
+		</div>
+	</div>
+<%end%>

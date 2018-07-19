@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Shop</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link href="https://fonts.googleapis.com/css?family=Merienda:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    
+  <nav>
+    <ul class="row around-xs head_style" >
+      <li class="col-xs-2 color_white"><%= link_to "Home", "welcome/index" %></li>
+      <li class="col-xs-2 color_white"><a href="products/catalog">Products</a>
+      </li>
+      <li>
+        <img src="http://4.bp.blogspot.com/-BeB-B174FXw/UBvpG_M8coI/AAAAAAAADgU/fahYd3ivHQA/s1600/1194986587157518295red_flower_raphael_seban_01.svg.hi.png" class="head_img">
+      </li>
+      <li class="col-xs-2 color_white"><a href="contact.asp">About</a></li>
+      <li class="col-xs-2 color_white"><a href="about.asp">Sign in</a></li>
+    </ul>
+  </nav>
+    <%= yield %>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+<div class="head_padding">Products</div>
+<div class="row" style="width: 80%; margin: 0 auto; margin-top: 0.2em;">
+	<%= @products.each do |product|%>
+		<div class="col-sm-6 col-lg-4">
+			<div class="card border">
+				<div class="card-topper" style="background-image: url(https://cloud10.todocoleccion.online/bisuteria/tc/2014/09/04/20/45086320.jpg);"></div>
+				<div class="card-block">
+					<h4 class="card-title title_font"><%= link_to product.name, product %></h4>
+					<p class="published-date"> Description: </p>
+					<p class="card-text description_font"><%= truncate(product.description, length: 52)%></p>
+					<buton class="button-shop"><span><%= link_to product.price, product , class:"text-decoration:none"%> €</span></buton>
+				</div>
+			</div>
+		</div>
+	<%end%>
+</div>
+
+
